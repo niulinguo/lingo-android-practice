@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.lingo.jingziqi_mvvm.JingZiQiViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:rowCount="3">
+
+            <Button
+                android:onClick="@{() -> viewModel.putCell(0, 0)}"
+                android:text="@{viewModel.cellText(0, 0)}" />
+
+            <Button
+                android:onClick="@{() -> viewModel.putCell(0, 1)}"
+                android:text="@{viewModel.cellText(0, 1)}" />
+
+            <Button
+                android:onClick="@{() -> viewModel.putCell(0, 2)}"
+                android:text="@{viewModel.cellText(0, 2)}" />
+
+            <Button
+                android:onClick="@{() -> viewModel.putCell(1, 0)}"
+                android:text="@{viewModel.cellText(1, 0)}" />
+
+            <Button
+                android:onClick="@{() -> viewModel.putCell(1, 1)}"
+                android:text="@{viewModel.cellText(1, 1)}" />
+
+            <Button
+                android:onClick="@{() -> viewModel.putCell(1, 2)}"
+                android:text="@{viewModel.cellText(1, 2)}" />
+
+            <Button
+                android:onClick="@{() -> viewModel.putCell(2, 0)}"
+                android:text="@{viewModel.cellText(2, 0)}" />
+
+            <Button
+                android:onClick="@{() -> viewModel.putCell(2, 1)}"
+                android:text="@{viewModel.cellText(2, 1)}" />
+
+            <Button
+                android:onClick="@{() -> viewModel.putCell(2, 2)}"
+                android:text="@{viewModel.cellText(2, 2)}" />
+
+        </GridLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.winnerText}" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
